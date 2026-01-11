@@ -73,7 +73,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm text-amber-700 uppercase tracking-wider">Valor do Imóvel</p>
-                  <p className="text-3xl font-bold text-gray-900">1.500.000</p>
+                  <p className="text-3xl font-bold text-gray-900">1.550.000</p>
                 </div>
               </div>
               <p className="text-amber-800 text-sm">

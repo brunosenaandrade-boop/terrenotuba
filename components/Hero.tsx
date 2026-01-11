@@ -33,13 +33,13 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-200 mb-6">
-          Ponto comercial consolidado em avenida de alto fluxo
+          Terreno 490m² na Rua Chile - Ponto comercial consolidado
         </p>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block">
           <p className="text-gray-300 text-sm uppercase tracking-wider mb-2">Valor</p>
           <p className="text-4xl md:text-5xl font-bold text-amber-400">
-            R$ 1.500.000
+            R$ 1.550.000
           </p>
         </div>
 

@@ -70,7 +70,7 @@ export default function Footer() {
               © {currentYear} - Imóvel Comercial Tubarão/SC. Todos os direitos reservados.
             </p>
             <p className="text-gray-500 text-sm">
-              Valor: R$ 1.500.000,00
+              Valor: R$ 1.550.000,00
             </p>
           </div>
         </div>

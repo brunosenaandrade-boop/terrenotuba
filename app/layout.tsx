@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Imóvel Comercial em Tubarão/SC - R$ 1.500.000",
+  title: "Terreno Comercial em Tubarão/SC - R$ 1.550.000 | Rua Chile 490m²",
   description:
-    "Oportunidade única! Terreno comercial em avenida principal de Tubarão/SC. Ponto comercial consolidado com loja na frente e casa nos fundos. 300-500m² de terreno.",
+    "Oportunidade única! Terreno 490m² na Rua Chile em Tubarão/SC. Ponto comercial consolidado com loja na frente e casa nos fundos. 14m x 35m.",
   keywords: [
     "imóvel comercial",
     "terreno",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "ponto comercial",
   ],
   openGraph: {
-    title: "Imóvel Comercial em Tubarão/SC - R$ 1.500.000",
+    title: "Terreno 490m² na Rua Chile - Tubarão/SC - R$ 1.550.000",
     description:
-      "Terreno comercial em avenida principal. Ponto consolidado com loja e casa.",
+      "Terreno comercial 490m² (14x35m). Ponto consolidado com loja e casa nos fundos.",
     type: "website",
     locale: "pt_BR",
     images: [

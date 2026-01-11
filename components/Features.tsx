@@ -10,13 +10,13 @@ import {
 const features = [
   {
     icon: MapPin,
-    title: 'Localização Privilegiada',
-    description: 'Avenida principal de Tubarão/SC com alto fluxo de veículos e pedestres',
+    title: 'Rua Chile - Tubarão/SC',
+    description: 'Localização privilegiada com alto fluxo de veículos e pedestres',
   },
   {
     icon: Maximize,
-    title: 'Terreno 300-500m²',
-    description: 'Ampla metragem com possibilidade de expansão ou novos empreendimentos',
+    title: 'Terreno 490m²',
+    description: '14 metros de frente x 35 metros de comprimento - amplo espaço',
   },
   {
     icon: Store,
@@ -87,7 +87,7 @@ export default function Features() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">300-500</p>
+                <p className="text-3xl font-bold text-amber-400">490</p>
                 <p className="text-sm text-gray-300">m² de terreno</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
