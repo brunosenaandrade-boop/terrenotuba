@@ -39,7 +39,7 @@ export default function Hero() {
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block">
           <p className="text-gray-300 text-sm uppercase tracking-wider mb-2">Valor</p>
           <p className="text-4xl md:text-5xl font-bold text-amber-400">
-            R$ 1.550.000
+            R$ 1.600.000
           </p>
         </div>
 
