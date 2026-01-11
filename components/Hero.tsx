@@ -33,7 +33,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-200 mb-6">
-          Terreno 490m² na Rua Chile - Ponto comercial consolidado
+          Terreno 490m² - Vila Moema - Ponto comercial consolidado
         </p>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block">

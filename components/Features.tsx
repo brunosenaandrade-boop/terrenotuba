@@ -10,8 +10,8 @@ import {
 const features = [
   {
     icon: MapPin,
-    title: 'Rua Chile - Tubarão/SC',
-    description: 'Localização privilegiada com alto fluxo de veículos e pedestres',
+    title: 'Vila Moema - Tubarão/SC',
+    description: 'Rua Profª Eugênia dos Reis Perito, 36 - Localização privilegiada',
   },
   {
     icon: Maximize,

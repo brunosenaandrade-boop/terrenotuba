@@ -8,22 +8,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Terreno Comercial em Tubarão/SC - R$ 1.550.000 | Rua Chile 490m²",
+  title: "Terreno Comercial em Tubarão/SC - R$ 1.550.000 | Vila Moema 490m²",
   description:
-    "Oportunidade única! Terreno 490m² na Rua Chile em Tubarão/SC. Ponto comercial consolidado com loja na frente e casa nos fundos. 14m x 35m.",
+    "Oportunidade única! Terreno 490m² na Vila Moema em Tubarão/SC. Rua Profª Eugênia dos Reis Perito, 36. Ponto comercial com loja e casa. 14m x 35m.",
   keywords: [
     "imóvel comercial",
     "terreno",
     "Tubarão",
     "Santa Catarina",
+    "Vila Moema",
     "investimento",
     "loja",
     "ponto comercial",
   ],
   openGraph: {
-    title: "Terreno 490m² na Rua Chile - Tubarão/SC - R$ 1.550.000",
+    title: "Terreno 490m² Vila Moema - Tubarão/SC - R$ 1.550.000",
     description:
-      "Terreno comercial 490m² (14x35m). Ponto consolidado com loja e casa nos fundos.",
+      "Terreno comercial 490m² (14x35m) na Rua Profª Eugênia dos Reis Perito, 36. Loja e casa.",
     type: "website",
     locale: "pt_BR",
     images: [

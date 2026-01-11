@@ -59,8 +59,8 @@ export default function Location() {
                   <MapPin className="w-6 h-6 text-amber-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl text-gray-900">Rua Chile - Tubarão/SC</h3>
-                  <p className="text-gray-500">Terreno 490m² - Zona comercial</p>
+                  <h3 className="font-bold text-xl text-gray-900">Vila Moema - Tubarão/SC</h3>
+                  <p className="text-gray-500">Rua Profª Eugênia dos Reis Perito, 36</p>
                 </div>
               </div>
 
