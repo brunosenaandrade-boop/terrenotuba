@@ -10,36 +10,45 @@ import ScrollTracker from "@/components/ScrollTracker";
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "RealEstateListing",
+  "@type": "Product",
   name: "Terreno Comercial 490m² - Vila Moema, Tubarão/SC",
   description:
     "Terreno comercial de 490m² com 14m de testada em zona comercial premium. A 900m do Farol Shopping, próximo à Av. Marcolino Martins Cabral.",
   url: "https://www.terrenotubarao.com.br",
   image: "https://www.terrenotubarao.com.br/images/fachada-principal.jpg",
+  category: "Terreno à venda",
   offers: {
     "@type": "Offer",
     price: 1600000,
     priceCurrency: "BRL",
     availability: "https://schema.org/InStock",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Rua Profª Eugênia dos Reis Perito, 36",
-    addressLocality: "Tubarão",
-    addressRegion: "SC",
-    postalCode: "88705-370",
-    addressCountry: "BR",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: -28.4718138,
-    longitude: -49.0148571,
+    itemCondition: "https://schema.org/NewCondition",
   },
   additionalProperty: [
-    { "@type": "PropertyValue", name: "Área", value: "490m²" },
+    { "@type": "PropertyValue", name: "Tipo", value: "Terreno comercial" },
+    { "@type": "PropertyValue", name: "Área total", value: "490m²" },
     { "@type": "PropertyValue", name: "Testada", value: "14m" },
+    { "@type": "PropertyValue", name: "Profundidade", value: "35m" },
     { "@type": "PropertyValue", name: "Preço por m²", value: "R$ 3.265" },
+    { "@type": "PropertyValue", name: "Zoneamento", value: "Zona comercial" },
   ],
+  "schema:location": {
+    "@type": "Place",
+    name: "Vila Moema, Tubarão/SC",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Rua Profª Eugênia dos Reis Perito, 36",
+      addressLocality: "Tubarão",
+      addressRegion: "SC",
+      postalCode: "88705-370",
+      addressCountry: "BR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -28.4718138,
+      longitude: -49.0148571,
+    },
+  },
 };
 
 export default function Home() {
