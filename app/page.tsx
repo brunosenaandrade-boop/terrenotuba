@@ -8,9 +8,47 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import ScrollTracker from "@/components/ScrollTracker";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  name: "Terreno Comercial 490m² - Vila Moema, Tubarão/SC",
+  description:
+    "Terreno comercial de 490m² com 14m de testada em zona comercial premium. A 900m do Farol Shopping, próximo à Av. Marcolino Martins Cabral.",
+  url: "https://www.terrenotubarao.com.br",
+  image: "https://www.terrenotubarao.com.br/images/fachada-principal.jpg",
+  offers: {
+    "@type": "Offer",
+    price: 1600000,
+    priceCurrency: "BRL",
+    availability: "https://schema.org/InStock",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rua Profª Eugênia dos Reis Perito, 36",
+    addressLocality: "Tubarão",
+    addressRegion: "SC",
+    postalCode: "88705-370",
+    addressCountry: "BR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -28.4718138,
+    longitude: -49.0148571,
+  },
+  additionalProperty: [
+    { "@type": "PropertyValue", name: "Área", value: "490m²" },
+    { "@type": "PropertyValue", name: "Testada", value: "14m" },
+    { "@type": "PropertyValue", name: "Preço por m²", value: "R$ 3.265" },
+  ],
+};
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <VideoTour />
       <Gallery />
