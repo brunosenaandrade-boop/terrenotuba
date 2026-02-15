@@ -39,7 +39,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-200 mb-6">
-          Vila Moema, Tubarão/SC — Entre 2 shoppings, a metros da Av. Marcolino
+          Vila Moema, Tubarão/SC — A 900m do Farol Shopping
         </p>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block">

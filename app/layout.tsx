@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.terrenotubarao.com.br"),
   title: "Terreno Comercial 490m² em Tubarão/SC | 14m Testada - Vila Moema",
   description:
-    "Terreno comercial 490m² (14m x 35m) na Vila Moema, Tubarão/SC. Zona comercial premium entre 2 shoppings. R$ 3.265/m². Ideal para construtoras e investidores.",
+    "Terreno comercial 490m² (14m x 35m) na Vila Moema, Tubarão/SC. A 900m do Farol Shopping. R$ 3.265/m². Ideal para construtoras e investidores.",
   keywords: [
     "terreno comercial Tubarão",
     "terreno Vila Moema",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terreno Comercial 490m² | 14m Testada - Vila Moema, Tubarão/SC",
     description:
-      "490m² em zona comercial premium. 14m de testada, entre 2 shoppings, a metros da Av. Marcolino. R$ 3.265/m².",
+      "490m² em zona comercial premium. 14m de testada, a 900m do Farol Shopping, próximo à Av. Marcolino. R$ 3.265/m².",
     type: "website",
     locale: "pt_BR",
     url: "https://www.terrenotubarao.com.br",

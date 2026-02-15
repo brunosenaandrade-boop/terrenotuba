@@ -4,38 +4,38 @@ const nearbyPlaces = [
   {
     icon: ShoppingCart,
     title: 'Farol Shopping',
-    description: 'Av. Marcolino, 2525 - Mesmo bairro',
-    distance: '3 min',
+    description: 'Av. Marcolino, 2525 - Bairro Aeroporto',
+    distance: '2 min (900m)',
   },
   {
     icon: ShoppingCart,
     title: 'Praça Shopping',
     description: 'Av. Marcolino, 1315 - Centro',
-    distance: '4 min',
+    distance: '4 min (2,1 km)',
   },
   {
     icon: Stethoscope,
     title: 'Hospital Unimed',
-    description: 'Pronto atendimento 24h, UTI',
-    distance: '3 min',
-  },
-  {
-    icon: Landmark,
-    title: 'Bancos',
-    description: 'Sicoob, Bradesco, Itaú, Caixa',
-    distance: '3-4 min',
+    description: 'R. Aldomar Cardoso, 198 - Passagem',
+    distance: '2 min (450m)',
   },
   {
     icon: Building2,
     title: 'Centro Médico Unimed',
     description: 'Av. Marcolino, 2300 - Diversas especialidades',
-    distance: '3 min',
+    distance: '2 min (1,0 km)',
+  },
+  {
+    icon: Landmark,
+    title: 'Bancos',
+    description: 'Bradesco, Itaú, Sicoob, Caixa - Centro',
+    distance: '4 min (2,3 km)',
   },
   {
     icon: Car,
     title: 'BR-101',
-    description: 'Acesso rápido à rodovia federal',
-    distance: '3 min',
+    description: 'Acesso ao trevo norte da rodovia federal',
+    distance: '3 min (2,9 km)',
   },
 ];
 
@@ -97,12 +97,16 @@ export default function Location() {
                       <h4 className="font-semibold text-gray-900">{place.title}</h4>
                       <p className="text-gray-500 text-sm">{place.description}</p>
                     </div>
-                    <span className="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-1 rounded-full">
+                    <span className="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-1 rounded-full whitespace-nowrap">
                       {place.distance}
                     </span>
                   </div>
                 ))}
               </div>
+
+              <p className="text-xs text-gray-400 mt-4">
+                * Tempos de carro via Google Maps, trânsito normal.
+              </p>
             </div>
 
             <div className="mt-4 p-4 bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl text-white">
