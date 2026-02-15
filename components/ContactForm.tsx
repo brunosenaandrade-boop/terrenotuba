@@ -62,6 +62,11 @@ export default function ContactForm() {
     // Honeypot: se preenchido, é bot
     if (data.website) return;
 
+    if (!GOOGLE_SCRIPT_URL) {
+      setStatus('error');
+      return;
+    }
+
     setStatus('loading');
 
     trackFormSubmit({
@@ -71,7 +76,7 @@ export default function ContactForm() {
     });
 
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
@@ -85,8 +90,6 @@ export default function ContactForm() {
         }),
       });
 
-      // Apps Script com no-cors retorna opaque response (status 0)
-      // Consideramos sucesso pois não há como verificar o body
       setStatus('success');
       reset();
     } catch {
