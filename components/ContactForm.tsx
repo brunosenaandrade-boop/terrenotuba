@@ -9,7 +9,6 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, FORMSPREE_ID } from '@/lib/constants
 interface FormData {
   nome: string;
   telefone: string;
-  email: string;
   interesse: string;
   prazo: string;
   pagamento: string;
@@ -54,7 +53,6 @@ export default function ContactForm() {
         body: JSON.stringify({
           nome: data.nome,
           telefone: data.telefone,
-          email: data.email,
           interesse: data.interesse,
           prazo: data.prazo,
           forma_pagamento: data.pagamento,
@@ -243,33 +241,6 @@ export default function ContactForm() {
                   />
                   {errors.telefone && (
                     <p className="mt-1 text-sm text-red-500">{errors.telefone.message}</p>
-                  )}
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    E-mail *
-                  </label>
-                  <input
-                    {...register('email', {
-                      required: 'E-mail é obrigatório',
-                      maxLength: { value: 100, message: 'Máximo 100 caracteres' },
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: 'E-mail inválido',
-                      },
-                    })}
-                    type="email"
-                    id="email"
-                    maxLength={100}
-                    className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.email ? 'border-red-500' : 'border-gray-200'
-                    } focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all`}
-                    placeholder="seu@email.com"
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
                   )}
                 </div>
 

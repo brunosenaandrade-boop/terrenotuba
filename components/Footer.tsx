@@ -1,8 +1,8 @@
 'use client';
 
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { trackWhatsAppClick } from '@/lib/tracking';
-import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, CONTACT_PHONE, CONTACT_EMAIL } from '@/lib/constants';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, CONTACT_PHONE } from '@/lib/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,13 +34,6 @@ export default function Footer() {
               >
                 <Phone className="w-5 h-5" />
                 <span>(48) 3192-0163</span>
-              </a>
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                <span>{CONTACT_EMAIL}</span>
               </a>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5" />
