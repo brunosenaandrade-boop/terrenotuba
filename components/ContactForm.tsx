@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { Send, CheckCircle, AlertCircle, Loader2, MessageCircle } from 'lucide-react';
 import { trackFormSubmit, trackFormStart, trackWhatsAppClick } from '@/lib/tracking';
-import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, FORMSPREE_ID } from '@/lib/constants';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, GOOGLE_SCRIPT_URL } from '@/lib/constants';
 
 interface FormData {
   nome: string;
@@ -47,8 +47,9 @@ export default function ContactForm() {
     });
 
     try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nome: data.nome,
@@ -57,16 +58,13 @@ export default function ContactForm() {
           prazo: data.prazo,
           forma_pagamento: data.pagamento,
           mensagem: data.mensagem,
-          assunto: `Lead Qualificado - ${data.interesse} - Terreno Tubarão/SC`,
         }),
       });
 
-      if (response.ok) {
-        setStatus('success');
-        reset();
-      } else {
-        setStatus('error');
-      }
+      // Apps Script com no-cors retorna opaque response (status 0)
+      // Consideramos sucesso pois não há como verificar o body
+      setStatus('success');
+      reset();
     } catch {
       setStatus('error');
     }

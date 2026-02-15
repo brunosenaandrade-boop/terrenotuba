@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://*.google.com https://*.googleapis.com https://*.gstatic.com",
               "font-src 'self' https://fonts.gstatic.com",
               "frame-src https://www.google.com https://www.youtube.com",
-              "connect-src 'self' https://formspree.io https://www.google-analytics.com https://www.facebook.com",
+              "connect-src 'self' https://script.google.com https://www.google-analytics.com https://www.facebook.com",
             ].join("; "),
           },
         ],
