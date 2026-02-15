@@ -1,17 +1,24 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { Play } from 'lucide-react';
 import { trackVideoPlay, trackCTAClick } from '@/lib/tracking';
 
 export default function VideoTour() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const trackedRef = useRef(false);
+  const [playing, setPlaying] = useState(false);
 
   const handlePlay = () => {
     if (!trackedRef.current) {
       trackedRef.current = true;
       trackVideoPlay();
     }
+    setPlaying(true);
+  };
+
+  const handleOverlayClick = () => {
+    videoRef.current?.play();
   };
 
   const scrollToContact = () => {
@@ -42,12 +49,26 @@ export default function VideoTour() {
             preload="metadata"
             playsInline
             onPlay={handlePlay}
+            onPause={() => setPlaying(false)}
             className="w-full"
             poster="/images/fachada-principal.jpg"
           >
             <source src="/videos/tour-terreno.mp4" type="video/mp4" />
             Seu navegador não suporta vídeos HTML5.
           </video>
+
+          {/* Play overlay */}
+          {!playing && (
+            <button
+              onClick={handleOverlayClick}
+              aria-label="Reproduzir vídeo"
+              className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity hover:bg-black/40 cursor-pointer"
+            >
+              <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+                <Play className="w-9 h-9 text-gray-900 ml-1" fill="currentColor" />
+              </div>
+            </button>
+          )}
         </div>
 
         {/* CTA abaixo do vídeo */}
