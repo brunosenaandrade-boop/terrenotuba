@@ -88,19 +88,19 @@ export default function Features() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">490</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-400">490</p>
                 <p className="text-sm text-gray-300">m² de terreno</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">14m</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-400">14m</p>
                 <p className="text-sm text-gray-300">de testada</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">R$ 3.265</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-400">R$ 3.265</p>
                 <p className="text-sm text-gray-300">por m²</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">Renda</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-400">Renda</p>
                 <p className="text-sm text-gray-300">imediata no local</p>
               </div>
             </div>
