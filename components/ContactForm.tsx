@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { Send, CheckCircle, AlertCircle, Loader2, MessageCircle } from 'lucide-react';
 import { trackFormSubmit, trackFormStart, trackWhatsAppClick } from '@/lib/tracking';
@@ -16,6 +16,17 @@ interface FormData {
   website: string; // honeypot
 }
 
+function formatPhone(value: string): string {
+  const digits = value.replace(/\D/g, '').slice(0, 11);
+  if (digits.length <= 2) return digits.length ? `(${digits}` : '';
+  if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+}
+
+function formatName(value: string): string {
+  return value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const formStartedRef = useRef(false);
@@ -24,8 +35,21 @@ export default function ContactForm() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<FormData>();
+
+  const handlePhoneChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhone(e.target.value);
+    setValue('telefone', formatted, { shouldValidate: true });
+    e.target.value = formatted;
+  }, [setValue]);
+
+  const handleNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatName(e.target.value);
+    setValue('nome', formatted, { shouldValidate: true });
+    e.target.value = formatted;
+  }, [setValue]);
 
   const handleFormInteraction = () => {
     if (!formStartedRef.current) {
@@ -208,7 +232,12 @@ export default function ContactForm() {
                     Nome completo *
                   </label>
                   <input
-                    {...register('nome', { required: 'Nome é obrigatório', maxLength: { value: 100, message: 'Máximo 100 caracteres' } })}
+                    {...register('nome', {
+                      required: 'Nome é obrigatório',
+                      minLength: { value: 3, message: 'Mínimo 3 caracteres' },
+                      maxLength: { value: 100, message: 'Máximo 100 caracteres' },
+                      onChange: handleNameChange,
+                    })}
                     type="text"
                     id="nome"
                     maxLength={100}
@@ -228,10 +257,14 @@ export default function ContactForm() {
                     Telefone / WhatsApp *
                   </label>
                   <input
-                    {...register('telefone', { required: 'Telefone é obrigatório', maxLength: { value: 20, message: 'Máximo 20 caracteres' } })}
+                    {...register('telefone', {
+                      required: 'Telefone é obrigatório',
+                      validate: (v) => v.replace(/\D/g, '').length >= 10 || 'Telefone incompleto',
+                      onChange: handlePhoneChange,
+                    })}
                     type="tel"
                     id="telefone"
-                    maxLength={20}
+                    maxLength={15}
                     className={`w-full px-4 py-3 rounded-xl border ${
                       errors.telefone ? 'border-red-500' : 'border-gray-200'
                     } focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all`}
@@ -307,8 +340,6 @@ export default function ContactForm() {
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="a_vista">À vista</option>
                     <option value="financiamento">Financiamento bancário</option>
-                    <option value="parcelado">Parcelado direto</option>
-                    <option value="permuta">Permuta</option>
                     <option value="a_combinar">A combinar</option>
                   </select>
                   {errors.pagamento && (
