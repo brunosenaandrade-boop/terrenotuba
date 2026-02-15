@@ -65,14 +65,9 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-slate-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
-              &copy; {currentYear} - Terreno Comercial Tubarão/SC. Todos os direitos reservados.
-            </p>
-            <p className="text-gray-500 text-sm">
-              Valor: R$ 1.600.000,00
-            </p>
-          </div>
+          <p className="text-gray-500 text-sm text-center">
+            &copy; {currentYear} - Terreno Comercial Tubarão/SC. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
