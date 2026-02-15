@@ -1,7 +1,16 @@
+'use client';
+
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { trackWhatsAppClick } from '@/lib/tracking';
+
+const WHATSAPP_NUMBER = '554831920163';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
+  };
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -21,20 +30,18 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <div className="space-y-3">
               <a
-                href="tel:+5548999999999"
+                href="tel:+554831920163"
                 className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                {/* TODO: Substitua pelo seu número */}
-                <span>(48) 99999-9999</span>
+                <span>(48) 3192-0163</span>
               </a>
               <a
-                href="mailto:contato@exemplo.com"
+                href="mailto:contato@terrenotubarao.com.br"
                 className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                {/* TODO: Substitua pelo seu email */}
-                <span>contato@exemplo.com</span>
+                <span>contato@terrenotubarao.com.br</span>
               </a>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5" />
@@ -50,9 +57,10 @@ export default function Footer() {
               Entre em contato pelo WhatsApp para mais informações ou agendar uma visita.
             </p>
             <a
-              href="https://wa.me/5548999999999?text=Olá! Tenho interesse no imóvel comercial em Tubarão/SC"
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Tenho interesse no terreno comercial em Tubarão/SC - Vila Moema.')}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -67,7 +75,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © {currentYear} - Imóvel Comercial Tubarão/SC. Todos os direitos reservados.
+              &copy; {currentYear} - Imóvel Comercial Tubarão/SC. Todos os direitos reservados.
             </p>
             <p className="text-gray-500 text-sm">
               Valor: R$ 1.600.000,00

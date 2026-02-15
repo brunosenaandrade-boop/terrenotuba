@@ -1,10 +1,16 @@
 'use client';
 
 import Image from 'next/image';
+import { trackCTAClick } from '@/lib/tracking';
 
 export default function Hero() {
   const scrollToContact = () => {
+    trackCTAClick('Hero - Tenho Interesse');
     document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToGallery = () => {
+    trackCTAClick('Hero - Ver Fotos');
   };
 
   return (
@@ -52,6 +58,7 @@ export default function Hero() {
           </button>
           <a
             href="#galeria"
+            onClick={scrollToGallery}
             className="border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-full text-lg transition-all"
           >
             Ver Fotos
