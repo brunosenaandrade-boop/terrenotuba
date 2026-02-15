@@ -36,7 +36,7 @@ const features = [
   {
     icon: Banknote,
     title: 'Renda Imediata',
-    description: 'Loja comercial e casa residencial já existentes no terreno — gere receita enquanto planeja seu projeto.',
+    description: 'Estrutura comercial já existente no terreno — gere receita enquanto planeja seu projeto.',
   },
 ];
 
@@ -81,7 +81,7 @@ export default function Features() {
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
                 490m² em uma das localizações comerciais mais valorizadas de Tubarão.
-                As estruturas existentes (loja + casa) geram renda enquanto você
+                A estrutura comercial existente gera renda enquanto você
                 planeja a melhor utilização do terreno. Ideal para construtoras,
                 investidores e empresários com visão de longo prazo.
               </p>
