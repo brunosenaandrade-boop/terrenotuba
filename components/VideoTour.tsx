@@ -42,6 +42,7 @@ export default function VideoTour() {
                 title="Vídeo Tour - Terreno Comercial Tubarão/SC"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                sandbox="allow-scripts allow-same-origin allow-presentation"
                 className="absolute inset-0 w-full h-full"
                 onLoad={handlePlay}
               />

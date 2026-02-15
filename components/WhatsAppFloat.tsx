@@ -1,11 +1,7 @@
 'use client';
 
 import { trackWhatsAppClick } from '@/lib/tracking';
-
-const WHATSAPP_NUMBER = '554831920163';
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Olá! Tenho interesse no terreno comercial em Tubarão/SC - Vila Moema.'
-);
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '@/lib/constants';
 
 export default function WhatsAppFloat() {
   const handleClick = () => {

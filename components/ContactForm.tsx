@@ -4,8 +4,7 @@ import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { Send, CheckCircle, AlertCircle, Loader2, MessageCircle } from 'lucide-react';
 import { trackFormSubmit, trackFormStart, trackWhatsAppClick } from '@/lib/tracking';
-
-const WHATSAPP_NUMBER = '554831920163';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, FORMSPREE_ID } from '@/lib/constants';
 
 interface FormData {
   nome: string;
@@ -15,6 +14,7 @@ interface FormData {
   prazo: string;
   pagamento: string;
   mensagem: string;
+  website: string; // honeypot
 }
 
 export default function ContactForm() {
@@ -36,6 +36,9 @@ export default function ContactForm() {
   };
 
   const onSubmit = async (data: FormData) => {
+    // Honeypot: se preenchido, é bot
+    if (data.website) return;
+
     setStatus('loading');
 
     trackFormSubmit({
@@ -45,8 +48,7 @@ export default function ContactForm() {
     });
 
     try {
-      // TODO: Substitua pelo seu ID do Formspree
-      const response = await fetch('https://formspree.io/f/SEU_ID_AQUI', {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -76,9 +78,7 @@ export default function ContactForm() {
     trackWhatsAppClick();
   };
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    'Olá! Preenchi o formulário no site e tenho interesse no terreno comercial em Tubarão/SC.'
-  )}`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
   return (
     <section id="contato" className="py-20 bg-white">
@@ -196,15 +196,26 @@ export default function ContactForm() {
                   Campos com * são obrigatórios
                 </p>
 
+                {/* Honeypot anti-spam */}
+                <div className="absolute opacity-0 -z-10" aria-hidden="true">
+                  <input
+                    {...register('website')}
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 {/* Nome */}
                 <div>
                   <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Nome completo *
                   </label>
                   <input
-                    {...register('nome', { required: 'Nome é obrigatório' })}
+                    {...register('nome', { required: 'Nome é obrigatório', maxLength: { value: 100, message: 'Máximo 100 caracteres' } })}
                     type="text"
                     id="nome"
+                    maxLength={100}
                     className={`w-full px-4 py-3 rounded-xl border ${
                       errors.nome ? 'border-red-500' : 'border-gray-200'
                     } focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all`}
@@ -221,9 +232,10 @@ export default function ContactForm() {
                     Telefone / WhatsApp *
                   </label>
                   <input
-                    {...register('telefone', { required: 'Telefone é obrigatório' })}
+                    {...register('telefone', { required: 'Telefone é obrigatório', maxLength: { value: 20, message: 'Máximo 20 caracteres' } })}
                     type="tel"
                     id="telefone"
+                    maxLength={20}
                     className={`w-full px-4 py-3 rounded-xl border ${
                       errors.telefone ? 'border-red-500' : 'border-gray-200'
                     } focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all`}
@@ -242,6 +254,7 @@ export default function ContactForm() {
                   <input
                     {...register('email', {
                       required: 'E-mail é obrigatório',
+                      maxLength: { value: 100, message: 'Máximo 100 caracteres' },
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                         message: 'E-mail inválido',
@@ -249,6 +262,7 @@ export default function ContactForm() {
                     })}
                     type="email"
                     id="email"
+                    maxLength={100}
                     className={`w-full px-4 py-3 rounded-xl border ${
                       errors.email ? 'border-red-500' : 'border-gray-200'
                     } focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all`}
@@ -339,9 +353,10 @@ export default function ContactForm() {
                     Mensagem <span className="text-gray-400">(opcional)</span>
                   </label>
                   <textarea
-                    {...register('mensagem')}
+                    {...register('mensagem', { maxLength: { value: 500, message: 'Máximo 500 caracteres' } })}
                     id="mensagem"
                     rows={3}
+                    maxLength={500}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none"
                     placeholder="Dúvidas, observações ou preferência de horário para contato..."
                   />

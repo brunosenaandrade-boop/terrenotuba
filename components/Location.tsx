@@ -63,6 +63,7 @@ export default function Location() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin"
               title="Localização do terreno em Tubarão/SC"
             />
             <div className="p-4 bg-slate-800 text-white">

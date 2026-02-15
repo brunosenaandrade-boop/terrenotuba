@@ -2,8 +2,7 @@
 
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { trackWhatsAppClick } from '@/lib/tracking';
-
-const WHATSAPP_NUMBER = '554831920163';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, CONTACT_PHONE, CONTACT_EMAIL } from '@/lib/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,18 +29,18 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <div className="space-y-3">
               <a
-                href="tel:+554831920163"
+                href={`tel:+${CONTACT_PHONE}`}
                 className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span>(48) 3192-0163</span>
               </a>
               <a
-                href="mailto:contato@terrenotubarao.com.br"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>contato@terrenotubarao.com.br</span>
+                <span>{CONTACT_EMAIL}</span>
               </a>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5" />
@@ -57,7 +56,7 @@ export default function Footer() {
               Entre em contato pelo WhatsApp para mais informações ou agendar uma visita.
             </p>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Tenho interesse no terreno comercial em Tubarão/SC - Vila Moema.')}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
