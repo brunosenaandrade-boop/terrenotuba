@@ -13,31 +13,34 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Terreno Comercial em Tubarão/SC - R$ 1.600.000 | Vila Moema 490m²",
+  metadataBase: new URL("https://www.terrenotubarao.com.br"),
+  title: "Terreno Comercial 490m² em Tubarão/SC | 14m Testada - Vila Moema",
   description:
-    "Oportunidade única! Terreno 490m² na Vila Moema em Tubarão/SC. Rua Profª Eugênia dos Reis Perito, 36. Ponto comercial com loja e casa. 14m x 35m.",
+    "Terreno comercial 490m² (14m x 35m) na Vila Moema, Tubarão/SC. Zona comercial premium entre 2 shoppings. R$ 3.265/m². Ideal para construtoras e investidores.",
   keywords: [
-    "imóvel comercial",
-    "terreno",
-    "Tubarão",
-    "Santa Catarina",
-    "Vila Moema",
-    "investimento",
-    "loja",
-    "ponto comercial",
+    "terreno comercial Tubarão",
+    "terreno Vila Moema",
+    "investimento imobiliário Tubarão",
+    "terreno 490m²",
+    "construtora Tubarão SC",
+    "incorporação imobiliária",
+    "terreno 14m testada",
+    "zona comercial Tubarão",
   ],
   openGraph: {
-    title: "Terreno 490m² Vila Moema - Tubarão/SC - R$ 1.600.000",
+    title: "Terreno Comercial 490m² | 14m Testada - Vila Moema, Tubarão/SC",
     description:
-      "Terreno comercial 490m² (14x35m) na Rua Profª Eugênia dos Reis Perito, 36. Loja e casa.",
+      "490m² em zona comercial premium. 14m de testada, entre 2 shoppings, a metros da Av. Marcolino. R$ 3.265/m².",
     type: "website",
     locale: "pt_BR",
+    url: "https://www.terrenotubarao.com.br",
+    siteName: "Terreno Comercial Tubarão",
     images: [
       {
         url: "/images/fachada-principal.jpg",
         width: 1200,
         height: 630,
-        alt: "Imóvel Comercial em Tubarão/SC",
+        alt: "Terreno comercial 490m² em Tubarão/SC - Vila Moema",
       },
     ],
   },

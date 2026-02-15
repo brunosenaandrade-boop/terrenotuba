@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/fachada-principal.jpg"
-          alt="Imóvel comercial em Tubarão/SC"
+          alt="Terreno comercial 490m² em Tubarão/SC - Vila Moema"
           fill
           className="object-cover"
           priority
@@ -30,23 +30,24 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <span className="inline-block bg-amber-500 text-black font-semibold px-4 py-2 rounded-full text-sm mb-6">
-          Oportunidade de Investimento
+          490m² em Zona Comercial Premium
         </span>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-          Terreno Comercial em
-          <span className="text-amber-400 block">Tubarão/SC</span>
+          Terreno Comercial
+          <span className="text-amber-400 block">14m de Testada</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-200 mb-6">
-          Terreno 490m² - Vila Moema - Ponto comercial consolidado
+          Vila Moema, Tubarão/SC — Entre 2 shoppings, a metros da Av. Marcolino
         </p>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block">
-          <p className="text-gray-300 text-sm uppercase tracking-wider mb-2">Valor</p>
+          <p className="text-gray-300 text-sm uppercase tracking-wider mb-2">Investimento</p>
           <p className="text-4xl md:text-5xl font-bold text-amber-400">
             R$ 1.600.000
           </p>
+          <p className="text-gray-400 text-sm mt-2">R$ 3.265/m² — Zona comercial valorizada</p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -54,14 +55,14 @@ export default function Hero() {
             onClick={scrollToContact}
             className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-4 px-8 rounded-full text-lg transition-all hover:scale-105 shadow-lg"
           >
-            Tenho Interesse
+            Quero Mais Informações
           </button>
           <a
             href="#galeria"
             onClick={scrollToGallery}
             className="border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-full text-lg transition-all"
           >
-            Ver Fotos
+            Ver Fotos do Terreno
           </a>
         </div>
       </div>

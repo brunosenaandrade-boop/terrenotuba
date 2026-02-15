@@ -45,10 +45,10 @@ export default function Location() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Localização Privilegiada
+            Localização Estratégica
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            No coração comercial de Tubarão, próximo aos principais serviços e comércios
+            No principal eixo comercial de Tubarão — alto fluxo, visibilidade e acesso a serviços essenciais
           </p>
         </div>
 
@@ -108,10 +108,10 @@ export default function Location() {
             <div className="mt-4 p-4 bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl text-white">
               <h4 className="font-bold mb-2">Por que Vila Moema?</h4>
               <ul className="text-sm text-gray-300 space-y-1">
-                <li>• Bairro nobre e valorizado de Tubarão</li>
-                <li>• Próximo ao centro e principais avenidas</li>
+                <li>• Eixo comercial de maior valorização de Tubarão</li>
+                <li>• Alto fluxo de veículos e pedestres</li>
                 <li>• Av. Marcolino Martins Cabral a poucos metros</li>
-                <li>• Infraestrutura completa de comércio e serviços</li>
+                <li>• Infraestrutura completa — ideal para empreendimentos</li>
               </ul>
             </div>
           </div>

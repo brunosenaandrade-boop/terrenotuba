@@ -26,10 +26,10 @@ export default function VideoTour() {
             Tour Virtual
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Conheça o Imóvel por Dentro
+            Conheça o Terreno
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Assista ao vídeo e veja de perto toda a estrutura, localização e potencial deste terreno comercial
+            Veja a localização, dimensões, estrutura existente e o potencial de desenvolvimento deste terreno
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export default function VideoTour() {
         {/* CTA abaixo do vídeo */}
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-4">
-            Gostou do que viu? Fale conosco e agende uma visita presencial.
+            Quer conhecer o terreno pessoalmente? Agende uma visita.
           </p>
           <button
             onClick={scrollToContact}

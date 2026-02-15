@@ -1,42 +1,42 @@
 import {
   MapPin,
   Maximize,
-  Store,
-  TreePine,
+  Ruler,
   TrendingUp,
   Building2,
+  Banknote,
 } from 'lucide-react';
 
 const features = [
   {
-    icon: MapPin,
-    title: 'Vila Moema - Tubarão/SC',
-    description: 'Rua Profª Eugênia dos Reis Perito, 36 - Localização privilegiada',
-  },
-  {
     icon: Maximize,
-    title: 'Terreno 490m²',
-    description: '14 metros de frente x 35 metros de comprimento - amplo espaço',
+    title: '490m² de Terreno',
+    description: 'Área total generosa para projetos comerciais, incorporação ou desenvolvimento imobiliário.',
   },
   {
-    icon: Store,
-    title: 'Loja Comercial',
-    description: 'Ponto comercial consolidado com fachada em vidro e excelente visibilidade',
+    icon: Ruler,
+    title: '14m de Testada',
+    description: '14 metros de frente por 35 de profundidade — testada ampla para fachada comercial de alto impacto.',
   },
   {
-    icon: Building2,
-    title: 'Casa Residencial',
-    description: 'Imóvel residencial nos fundos - ideal para moradia ou renda extra',
-  },
-  {
-    icon: TreePine,
-    title: 'Área Verde',
-    description: 'Quintal amplo e gramado com jardim tropical e árvores frutíferas',
+    icon: MapPin,
+    title: 'Zona Comercial Premium',
+    description: 'Vila Moema, entre Farol Shopping e Praça Shopping, a metros da Av. Marcolino Martins Cabral.',
   },
   {
     icon: TrendingUp,
-    title: 'Alto Potencial',
-    description: 'Região em valorização constante - excelente para investimento',
+    title: 'Região em Valorização',
+    description: 'Eixo comercial de maior crescimento de Tubarão. Tendência de valorização contínua nos próximos anos.',
+  },
+  {
+    icon: Building2,
+    title: 'Potencial Construtivo',
+    description: 'Zoneamento comercial permite construção de lojas, clínicas, escritórios, edifício misto ou galpão.',
+  },
+  {
+    icon: Banknote,
+    title: 'Renda Imediata',
+    description: 'Loja comercial e casa residencial já existentes no terreno — gere receita enquanto planeja seu projeto.',
   },
 ];
 
@@ -46,10 +46,10 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Por que este imóvel?
+            Por que este terreno?
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Um investimento completo com múltiplas possibilidades de uso e renda
+            Um ativo imobiliário em localização estratégica, com potencial de desenvolvimento e renda imediata
           </p>
         </div>
 
@@ -77,12 +77,13 @@ export default function Features() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Imóvel Misto: Comercial + Residencial
+                Terreno Pronto para Desenvolver
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Este é um imóvel único que combina o melhor dos dois mundos: um ponto
-                comercial consolidado na frente, ideal para diversos tipos de negócio,
-                e uma residência confortável nos fundos com amplo quintal.
+                490m² em uma das localizações comerciais mais valorizadas de Tubarão.
+                As estruturas existentes (loja + casa) geram renda enquanto você
+                planeja a melhor utilização do terreno. Ideal para construtoras,
+                investidores e empresários com visão de longo prazo.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -91,16 +92,16 @@ export default function Features() {
                 <p className="text-sm text-gray-300">m² de terreno</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">2</p>
-                <p className="text-sm text-gray-300">imóveis no local</p>
+                <p className="text-3xl font-bold text-amber-400">14m</p>
+                <p className="text-sm text-gray-300">de testada</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">Alto</p>
-                <p className="text-sm text-gray-300">fluxo na avenida</p>
+                <p className="text-3xl font-bold text-amber-400">R$ 3.265</p>
+                <p className="text-sm text-gray-300">por m²</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-3xl font-bold text-amber-400">Pronto</p>
-                <p className="text-sm text-gray-300">para usar</p>
+                <p className="text-3xl font-bold text-amber-400">Renda</p>
+                <p className="text-sm text-gray-300">imediata no local</p>
               </div>
             </div>
           </div>

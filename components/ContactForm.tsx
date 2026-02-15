@@ -87,11 +87,11 @@ export default function ContactForm() {
           {/* Info */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Interessado neste imóvel?
+              Interesse neste terreno?
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Preencha o formulário com seus dados e nosso time entrará em contato
-              para tirar suas dúvidas e agendar uma visita.
+              Preencha seus dados para receber informações detalhadas sobre o terreno,
+              documentação e condições de negociação.
             </p>
 
             <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl p-6 mb-8">
@@ -105,7 +105,7 @@ export default function ContactForm() {
                 </div>
               </div>
               <p className="text-amber-800 text-sm">
-                Aceita financiamento bancário. Consulte condições de pagamento.
+                R$ 3.265/m² — Aceita financiamento e negociação direta.
               </p>
             </div>
 
@@ -116,11 +116,11 @@ export default function ContactForm() {
               </p>
               <p className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
-                Agendamento de visita sem compromisso
+                Visita ao terreno sem compromisso
               </p>
               <p className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
-                Documentação regularizada
+                Documentação e matrícula regularizadas
               </p>
             </div>
 

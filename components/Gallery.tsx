@@ -62,10 +62,10 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Galeria de Fotos
+            Fotos do Terreno
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Conheça todos os detalhes deste imóvel comercial único em Tubarão/SC
+            Veja o terreno, as estruturas existentes, vista aérea e o entorno comercial
           </p>
         </div>
 
