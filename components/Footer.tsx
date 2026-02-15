@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Imóvel Comercial</h3>
+            <h3 className="text-xl font-bold mb-4">Terreno Comercial</h3>
             <p className="text-gray-400 leading-relaxed">
               Terreno comercial em localização privilegiada em Tubarão/SC.
               Oportunidade única de investimento com múltiplas possibilidades de uso.
@@ -75,7 +75,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              &copy; {currentYear} - Imóvel Comercial Tubarão/SC. Todos os direitos reservados.
+              &copy; {currentYear} - Terreno Comercial Tubarão/SC. Todos os direitos reservados.
             </p>
             <p className="text-gray-500 text-sm">
               Valor: R$ 1.600.000,00

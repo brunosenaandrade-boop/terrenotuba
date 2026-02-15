@@ -39,7 +39,7 @@ export default function VideoTour() {
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
-                title="Video Tour - Terreno Comercial Tubarão/SC"
+                title="Vídeo Tour - Terreno Comercial Tubarão/SC"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
@@ -54,7 +54,7 @@ export default function VideoTour() {
                   <Play className="w-10 h-10 text-amber-400 ml-1" />
                 </div>
                 <p className="text-white text-xl font-semibold mb-2">Vídeo Tour em Breve</p>
-                <p className="text-gray-400 text-sm">O tour completo do imóvel será disponibilizado aqui</p>
+                <p className="text-gray-400 text-sm">O tour completo do terreno será disponibilizado aqui</p>
               </div>
             </div>
           )}

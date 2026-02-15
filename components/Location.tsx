@@ -63,7 +63,7 @@ export default function Location() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização do imóvel em Tubarão/SC"
+              title="Localização do terreno em Tubarão/SC"
             />
             <div className="p-4 bg-slate-800 text-white">
               <div className="flex items-center gap-2">

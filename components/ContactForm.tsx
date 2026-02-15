@@ -100,7 +100,7 @@ export default function ContactForm() {
                   <span className="text-2xl font-bold text-white">R$</span>
                 </div>
                 <div>
-                  <p className="text-sm text-amber-700 uppercase tracking-wider">Valor do Imóvel</p>
+                  <p className="text-sm text-amber-700 uppercase tracking-wider">Valor do Terreno</p>
                   <p className="text-3xl font-bold text-gray-900">1.600.000</p>
                 </div>
               </div>
@@ -373,7 +373,7 @@ export default function ContactForm() {
                 </button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  Seus dados estão seguros. Usaremos apenas para contato sobre este imóvel.
+                  Seus dados estão seguros. Usaremos apenas para contato sobre este terreno.
                 </p>
               </form>
             )}
