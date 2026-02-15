@@ -1,16 +1,17 @@
 'use client';
 
-import { Play } from 'lucide-react';
+import { useRef } from 'react';
 import { trackVideoPlay, trackCTAClick } from '@/lib/tracking';
 
-// TODO: Substitua pelo ID do vídeo no YouTube
-const YOUTUBE_VIDEO_ID = 'SEU_VIDEO_ID';
-
 export default function VideoTour() {
-  const hasVideo = YOUTUBE_VIDEO_ID !== 'SEU_VIDEO_ID';
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const trackedRef = useRef(false);
 
   const handlePlay = () => {
-    trackVideoPlay();
+    if (!trackedRef.current) {
+      trackedRef.current = true;
+      trackVideoPlay();
+    }
   };
 
   const scrollToContact = () => {
@@ -35,30 +36,18 @@ export default function VideoTour() {
 
         {/* Video Container */}
         <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-slate-900">
-          {hasVideo ? (
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
-                title="Vídeo Tour - Terreno Comercial Tubarão/SC"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                sandbox="allow-scripts allow-same-origin allow-presentation"
-                className="absolute inset-0 w-full h-full"
-                onLoad={handlePlay}
-              />
-            </div>
-          ) : (
-            /* Placeholder enquanto o vídeo não é adicionado */
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col items-center justify-center">
-                <div className="w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mb-6">
-                  <Play className="w-10 h-10 text-amber-400 ml-1" />
-                </div>
-                <p className="text-white text-xl font-semibold mb-2">Vídeo Tour em Breve</p>
-                <p className="text-gray-400 text-sm">O tour completo do terreno será disponibilizado aqui</p>
-              </div>
-            </div>
-          )}
+          <video
+            ref={videoRef}
+            controls
+            preload="metadata"
+            playsInline
+            onPlay={handlePlay}
+            className="w-full"
+            poster="/images/fachada-principal.jpg"
+          >
+            <source src="/videos/tour-terreno.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos HTML5.
+          </video>
         </div>
 
         {/* CTA abaixo do vídeo */}
