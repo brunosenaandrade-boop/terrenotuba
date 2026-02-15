@@ -36,9 +36,7 @@ export default function CookieConsent() {
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-slate-900 text-white p-4 shadow-2xl border-t border-slate-700">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4">
         <p className="text-sm text-gray-300 flex-1">
-          Utilizamos cookies para melhorar sua experiência e analisar o tráfego do site.
-          Ao aceitar, você concorda com o uso de cookies de análise (Google Analytics e Meta Pixel)
-          conforme a LGPD.
+          Este site usa cookies de análise para melhorar sua experiência.
         </p>
         <div className="flex gap-3 shrink-0">
           <button
