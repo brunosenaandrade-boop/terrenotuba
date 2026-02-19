@@ -1,0 +1,370 @@
+'use client';
+
+const qrCodePath =
+  "M4,4H5V5H4zM5,4H6V5H5zM6,4H7V5H6zM7,4H8V5H7zM8,4H9V5H8zM9,4H10V5H9zM10,4H11V5H10zM12,4H13V5H12zM15,4H16V5H15zM16,4H17V5H16zM17,4H18V5H17zM20,4H21V5H20zM21,4H22V5H21zM22,4H23V5H22zM24,4H25V5H24zM25,4H26V5H25zM26,4H27V5H26zM28,4H29V5H28zM30,4H31V5H30zM31,4H32V5H31zM32,4H33V5H32zM33,4H34V5H33zM34,4H35V5H34zM35,4H36V5H35zM36,4H37V5H36zM4,5H5V6H4zM10,5H11V6H10zM15,5H16V6H15zM18,5H19V6H18zM20,5H21V6H20zM21,5H22V6H21zM23,5H24V6H23zM25,5H26V6H25zM28,5H29V6H28zM30,5H31V6H30zM36,5H37V6H36zM4,6H5V7H4zM6,6H7V7H6zM7,6H8V7H7zM8,6H9V7H8zM10,6H11V7H10zM12,6H13V7H12zM14,6H15V7H14zM16,6H17V7H16zM17,6H18V7H17zM22,6H23V7H22zM24,6H25V7H24zM25,6H26V7H25zM27,6H28V7H27zM28,6H29V7H28zM30,6H31V7H30zM32,6H33V7H32zM33,6H34V7H33zM34,6H35V7H34zM36,6H37V7H36zM4,7H5V8H4zM6,7H7V8H6zM7,7H8V8H7zM8,7H9V8H8zM10,7H11V8H10zM13,7H14V8H13zM14,7H15V8H14zM16,7H17V8H16zM19,7H20V8H19zM21,7H22V8H21zM22,7H23V8H22zM23,7H24V8H23zM24,7H25V8H24zM25,7H26V8H25zM27,7H28V8H27zM30,7H31V8H30zM32,7H33V8H32zM33,7H34V8H33zM34,7H35V8H34zM36,7H37V8H36zM4,8H5V9H4zM6,8H7V9H6zM7,8H8V9H7zM8,8H9V9H8zM10,8H11V9H10zM12,8H13V9H12zM14,8H15V9H14zM15,8H16V9H15zM16,8H17V9H16zM18,8H19V9H18zM20,8H21V9H20zM21,8H22V9H21zM22,8H23V9H22zM23,8H24V9H23zM24,8H25V9H24zM25,8H26V9H25zM26,8H27V9H26zM27,8H28V9H27zM30,8H31V9H30zM32,8H33V9H32zM33,8H34V9H33zM34,8H35V9H34zM36,8H37V9H36zM4,9H5V10H4zM10,9H11V10H10zM13,9H14V10H13zM17,9H18V10H17zM25,9H26V10H25zM28,9H29V10H28zM30,9H31V10H30zM36,9H37V10H36zM4,10H5V11H4zM5,10H6V11H5zM6,10H7V11H6zM7,10H8V11H7zM8,10H9V11H8zM9,10H10V11H9zM10,10H11V11H10zM12,10H13V11H12zM14,10H15V11H14zM16,10H17V11H16zM18,10H19V11H18zM20,10H21V11H20zM22,10H23V11H22zM24,10H25V11H24zM26,10H27V11H26zM28,10H29V11H28zM30,10H31V11H30zM31,10H32V11H31zM32,10H33V11H32zM33,10H34V11H33zM34,10H35V11H34zM35,10H36V11H35zM36,10H37V11H36zM12,11H13V12H12zM14,11H15V12H14zM17,11H18V12H17zM19,11H20V12H19zM20,11H21V12H20zM22,11H23V12H22zM24,11H25V12H24zM27,11H28V12H27zM28,11H29V12H28zM9,12H10V13H9zM10,12H11V13H10zM16,12H17V13H16zM17,12H18V13H17zM18,12H19V13H18zM19,12H20V13H19zM21,12H22V13H21zM23,12H24V13H23zM24,12H25V13H24zM26,12H27V13H26zM30,12H31V13H30zM32,12H33V13H32zM34,12H35V13H34zM36,12H37V13H36zM5,13H6V14H5zM6,13H7V14H6zM11,13H12V14H11zM13,13H14V14H13zM14,13H15V14H14zM17,13H18V14H17zM22,13H23V14H22zM23,13H24V14H23zM26,13H27V14H26zM27,13H28V14H27zM29,13H30V14H29zM31,13H32V14H31zM32,13H33V14H32zM33,13H34V14H33zM35,13H36V14H35zM5,14H6V15H5zM6,14H7V15H6zM7,14H8V15H7zM8,14H9V15H8zM9,14H10V15H9zM10,14H11V15H10zM13,14H14V15H13zM15,14H16V15H15zM16,14H17V15H16zM18,14H19V15H18zM19,14H20V15H19zM21,14H22V15H21zM22,14H23V15H22zM24,14H25V15H24zM29,14H30V15H29zM30,14H31V15H30zM31,14H32V15H31zM35,14H36V15H35zM4,15H5V16H4zM7,15H8V16H7zM9,15H10V16H9zM11,15H12V16H11zM16,15H17V16H16zM18,15H19V16H18zM19,15H20V16H19zM22,15H23V16H22zM23,15H24V16H23zM28,15H29V16H28zM30,15H31V16H30zM31,15H32V16H31zM33,15H34V16H33zM34,15H35V16H34zM35,15H36V16H35zM36,15H37V16H36zM7,16H8V17H7zM8,16H9V17H8zM9,16H10V17H9zM10,16H11V17H10zM11,16H12V17H11zM13,16H14V17H13zM14,16H15V17H14zM15,16H16V17H15zM17,16H18V17H17zM18,16H19V17H18zM19,16H20V17H19zM21,16H22V17H21zM24,16H25V17H24zM25,16H26V17H25zM26,16H27V17H26zM27,16H28V17H27zM30,16H31V17H30zM31,16H32V17H31zM33,16H34V17H33zM36,16H37V17H36zM4,17H5V18H4zM5,17H6V18H5zM8,17H9V18H8zM11,17H12V18H11zM12,17H13V18H12zM14,17H15V18H14zM15,17H16V18H15zM19,17H20V18H19zM20,17H21V18H20zM23,17H24V18H23zM24,17H25V18H24zM25,17H26V18H25zM27,17H28V18H27zM29,17H30V18H29zM30,17H31V18H30zM31,17H32V18H31zM33,17H34V18H33zM36,17H37V18H36zM4,18H5V19H4zM5,18H6V19H5zM7,18H8V19H7zM9,18H10V19H9zM10,18H11V19H10zM13,18H14V19H13zM15,18H16V19H15zM16,18H17V19H16zM17,18H18V19H17zM18,18H19V19H18zM19,18H20V19H19zM22,18H23V19H22zM24,18H25V19H24zM26,18H27V19H26zM29,18H30V19H29zM32,18H33V19H32zM35,18H36V19H35zM4,19H5V20H4zM5,19H6V20H5zM6,19H7V20H6zM8,19H9V20H8zM12,19H13V20H12zM15,19H16V20H15zM20,19H21V20H20zM21,19H22V20H21zM22,19H23V20H22zM29,19H30V20H29zM30,19H31V20H30zM31,19H32V20H31zM33,19H34V20H33zM34,19H35V20H34zM35,19H36V20H35zM36,19H37V20H36zM4,20H5V21H4zM5,20H6V21H5zM6,20H7V21H6zM7,20H8V21H7zM8,20H9V21H8zM10,20H11V21H10zM14,20H15V21H14zM17,20H18V21H17zM18,20H19V21H18zM20,20H21V21H20zM22,20H23V21H22zM23,20H24V21H23zM29,20H30V21H29zM32,20H33V21H32zM4,21H5V22H4zM5,21H6V22H5zM6,21H7V22H6zM11,21H12V22H11zM13,21H14V22H13zM17,21H18V22H17zM18,21H19V22H18zM19,21H20V22H19zM20,21H21V22H20zM21,21H22V22H21zM22,21H23V22H22zM23,21H24V22H23zM27,21H28V22H27zM28,21H29V22H28zM30,21H31V22H30zM31,21H32V22H31zM36,21H37V22H36zM4,22H5V23H4zM6,22H7V23H6zM7,22H8V23H7zM8,22H9V23H8zM9,22H10V23H9zM10,22H11V23H10zM11,22H12V23H11zM15,22H16V23H15zM16,22H17V23H16zM17,22H18V23H17zM19,22H20V23H19zM20,22H21V23H20zM22,22H23V23H22zM23,22H24V23H23zM26,22H27V23H26zM27,22H28V23H27zM31,22H32V23H31zM32,22H33V23H32zM33,22H34V23H33zM34,22H35V23H34zM35,22H36V23H35zM36,22H37V23H36zM6,23H7V24H6zM7,23H8V24H7zM8,23H9V24H8zM11,23H12V24H11zM13,23H14V24H13zM14,23H15V24H14zM16,23H17V24H16zM17,23H18V24H17zM18,23H19V24H18zM19,23H20V24H19zM21,23H22V24H21zM22,23H23V24H22zM23,23H24V24H23zM24,23H25V24H24zM27,23H28V24H27zM28,23H29V24H28zM29,23H30V24H29zM31,23H32V24H31zM33,23H34V24H33zM34,23H35V24H34zM35,23H36V24H35zM36,23H37V24H36zM5,24H6V25H5zM6,24H7V25H6zM7,24H8V25H7zM9,24H10V25H9zM10,24H11V25H10zM11,24H12V25H11zM12,24H13V25H12zM13,24H14V25H13zM14,24H15V25H14zM15,24H16V25H15zM16,24H17V25H16zM17,24H18V25H17zM19,24H20V25H19zM20,24H21V25H20zM22,24H23V25H22zM23,24H24V25H23zM26,24H27V25H26zM28,24H29V25H28zM31,24H32V25H31zM32,24H33V25H32zM33,24H34V25H33zM35,24H36V25H35zM36,24H37V25H36zM4,25H5V26H4zM8,25H9V26H8zM9,25H10V26H9zM12,25H13V26H12zM14,25H15V26H14zM17,25H18V26H17zM18,25H19V26H18zM19,25H20V26H19zM20,25H21V26H20zM21,25H22V26H21zM22,25H23V26H22zM23,25H24V26H23zM26,25H27V26H26zM27,25H28V26H27zM32,25H33V26H32zM33,25H34V26H33zM34,25H35V26H34zM4,26H5V27H4zM6,26H7V27H6zM9,26H10V27H9zM10,26H11V27H10zM13,26H14V27H13zM14,26H15V27H14zM15,26H16V27H15zM16,26H17V27H16zM17,26H18V27H17zM19,26H20V27H19zM20,26H21V27H20zM22,26H23V27H22zM24,26H25V27H24zM25,26H26V27H25zM28,26H29V27H28zM32,26H33V27H32zM33,26H34V27H33zM35,26H36V27H35zM4,27H5V28H4zM7,27H8V28H7zM8,27H9V28H8zM11,27H12V28H11zM12,27H13V28H12zM14,27H15V28H14zM17,27H18V28H17zM18,27H19V28H18zM19,27H20V28H19zM20,27H21V28H20zM21,27H22V28H21zM23,27H24V28H23zM26,27H27V28H26zM27,27H28V28H27zM31,27H32V28H31zM33,27H34V28H33zM34,27H35V28H34zM35,27H36V28H35zM4,28H5V29H4zM5,28H6V29H5zM6,28H7V29H6zM7,28H8V29H7zM8,28H9V29H8zM9,28H10V29H9zM10,28H11V29H10zM11,28H12V29H11zM13,28H14V29H13zM16,28H17V29H16zM17,28H18V29H17zM18,28H19V29H18zM19,28H20V29H19zM21,28H22V29H21zM24,28H25V29H24zM28,28H29V29H28zM29,28H30V29H29zM30,28H31V29H30zM31,28H32V29H31zM32,28H33V29H32zM36,28H37V29H36zM12,29H13V30H12zM17,29H18V30H17zM18,29H19V30H18zM20,29H21V30H20zM21,29H22V30H21zM22,29H23V30H22zM24,29H25V30H24zM25,29H26V30H25zM28,29H29V30H28zM32,29H33V30H32zM33,29H34V30H33zM35,29H36V30H35zM36,29H37V30H36zM4,30H5V31H4zM5,30H6V31H5zM6,30H7V31H6zM7,30H8V31H7zM8,30H9V31H8zM9,30H10V31H9zM10,30H11V31H10zM13,30H14V31H13zM14,30H15V31H14zM16,30H17V31H16zM22,30H23V31H22zM23,30H24V31H23zM26,30H27V31H26zM27,30H28V31H27zM28,30H29V31H28zM30,30H31V31H30zM32,30H33V31H32zM33,30H34V31H33zM35,30H36V31H35zM4,31H5V32H4zM10,31H11V32H10zM12,31H13V32H12zM14,31H15V32H14zM18,31H19V32H18zM19,31H20V32H19zM22,31H23V32H22zM24,31H25V32H24zM25,31H26V32H25zM26,31H27V32H26zM27,31H28V32H27zM28,31H29V32H28zM32,31H33V32H32zM33,31H34V32H33zM34,31H35V32H34zM35,31H36V32H35zM4,32H5V33H4zM6,32H7V33H6zM7,32H8V33H7zM8,32H9V33H8zM10,32H11V33H10zM14,32H15V33H14zM15,32H16V33H15zM16,32H17V33H16zM20,32H21V33H20zM21,32H22V33H21zM24,32H25V33H24zM25,32H26V33H25zM26,32H27V33H26zM28,32H29V33H28zM29,32H30V33H29zM30,32H31V33H30zM31,32H32V33H31zM32,32H33V33H32zM33,32H34V33H33zM35,32H36V33H35zM36,32H37V33H36zM4,33H5V34H4zM6,33H7V34H6zM7,33H8V34H7zM8,33H9V34H8zM10,33H11V34H10zM14,33H15V34H14zM16,33H17V34H16zM19,33H20V34H19zM20,33H21V34H20zM22,33H23V34H22zM24,33H25V34H24zM29,33H30V34H29zM31,33H32V34H31zM32,33H33V34H32zM34,33H35V34H34zM36,33H37V34H36zM4,34H5V35H4zM6,34H7V35H6zM7,34H8V35H7zM8,34H9V35H8zM10,34H11V35H10zM13,34H14V35H13zM15,34H16V35H15zM16,34H17V35H16zM17,34H18V35H17zM19,34H20V35H19zM21,34H22V35H21zM22,34H23V35H22zM24,34H25V35H24zM25,34H26V35H25zM27,34H28V35H27zM28,34H29V35H28zM32,34H33V35H32zM35,34H36V35H35zM36,34H37V35H36zM4,35H5V36H4zM10,35H11V36H10zM14,35H15V36H14zM15,35H16V36H15zM16,35H17V36H16zM17,35H18V36H17zM18,35H19V36H18zM19,35H20V36H19zM20,35H21V36H20zM21,35H22V36H21zM22,35H23V36H22zM25,35H26V36H25zM29,35H30V36H29zM33,35H34V36H33zM34,35H35V36H34zM4,36H5V37H4zM5,36H6V37H5zM6,36H7V37H6zM7,36H8V37H7zM8,36H9V37H8zM9,36H10V37H9zM10,36H11V37H10zM13,36H14V37H13zM18,36H19V37H18zM21,36H22V37H21zM23,36H24V37H23zM24,36H25V37H24zM27,36H28V37H27zM28,36H29V37H28zM35,36H36V37H35z";
+
+export default function ImpressaoPage() {
+  return (
+    <>
+      <style>{`
+        body { background: #f1f5f9 !important; }
+
+        .print-page {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          padding: 40px 20px;
+        }
+
+        .print-info {
+          text-align: center;
+          margin-bottom: 30px;
+          color: #64748b;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+        .print-info strong { color: #1e293b; }
+
+        .placa {
+          width: 1200px;
+          height: 600px;
+          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          border-radius: 16px;
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        }
+        .placa::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 8px;
+          background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b);
+        }
+
+        .placa-info {
+          flex: 1;
+          padding: 28px 40px 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .tag-vende {
+          display: inline-block;
+          background: #f59e0b;
+          color: #0f172a;
+          font-weight: 800;
+          font-size: 16px;
+          padding: 6px 18px;
+          border-radius: 50px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          width: fit-content;
+        }
+
+        .titulo { margin-top: 6px; }
+        .titulo h1 {
+          font-size: 62px;
+          font-weight: 900;
+          color: #ffffff;
+          line-height: 1.0;
+          letter-spacing: -2px;
+        }
+        .titulo h1 span {
+          color: #fbbf24;
+          display: block;
+        }
+
+        .specs {
+          display: flex;
+          gap: 24px;
+          margin-top: 12px;
+        }
+        .spec-item { text-align: center; }
+        .spec-valor {
+          font-size: 30px;
+          font-weight: 800;
+          color: #fbbf24;
+          line-height: 1;
+        }
+        .spec-label {
+          font-size: 13px;
+          color: #94a3b8;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-top: 4px;
+        }
+        .spec-divider {
+          width: 2px;
+          background: #334155;
+          border-radius: 2px;
+        }
+
+        .bottom-row {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        .localizacao {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .localizacao svg {
+          width: 20px; height: 20px;
+          color: #f59e0b;
+          flex-shrink: 0;
+        }
+        .localizacao span {
+          font-size: 15px;
+          color: #cbd5e1;
+          font-weight: 500;
+        }
+
+        .whatsapp {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+          padding: 12px 24px;
+          border-radius: 14px;
+          width: fit-content;
+          margin-top: 0;
+          border: 3px solid #22c55e;
+          box-shadow: 0 0 20px rgba(34, 197, 94, 0.3), 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .whatsapp svg {
+          width: 32px; height: 32px;
+          color: #ffffff;
+          flex-shrink: 0;
+        }
+        .whatsapp-text {
+          display: flex;
+          flex-direction: column;
+        }
+        .whatsapp-label {
+          font-size: 13px;
+          color: #86efac;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 700;
+        }
+        .whatsapp-number {
+          font-size: 30px;
+          color: #ffffff;
+          font-weight: 900;
+          letter-spacing: 2px;
+        }
+
+        .placa-qr {
+          width: 300px;
+          background: #ffffff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 30px;
+          position: relative;
+        }
+        .placa-qr::before {
+          content: '';
+          position: absolute;
+          left: 0; top: 40px; bottom: 40px;
+          width: 4px;
+          background: linear-gradient(180deg, #f59e0b, #fbbf24, #f59e0b);
+          border-radius: 2px;
+        }
+
+        .qr-titulo {
+          font-size: 13px;
+          color: #64748b;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          text-align: center;
+        }
+        .qr-code-container {
+          width: 200px; height: 200px;
+          padding: 8px;
+          border: 3px solid #1e293b;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .qr-code-container svg { width: 100%; height: 100%; }
+
+        .qr-url { margin-top: 16px; text-align: center; }
+        .qr-url-label {
+          font-size: 11px;
+          color: #94a3b8;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 4px;
+        }
+        .qr-url span {
+          font-size: 16px;
+          font-weight: 700;
+          color: #1e293b;
+          letter-spacing: 0.3px;
+        }
+
+        .qr-instrucao {
+          margin-top: 14px;
+          font-size: 12px;
+          color: #94a3b8;
+          text-align: center;
+          line-height: 1.4;
+        }
+        .qr-instrucao svg {
+          width: 16px; height: 16px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 4px;
+        }
+
+        .btn-print {
+          margin-top: 30px;
+          background: #1e293b;
+          color: white;
+          border: none;
+          padding: 14px 32px;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+        .btn-print:hover { background: #0f172a; }
+
+        @media print {
+          body { background: white !important; }
+          .print-info, .btn-print { display: none; }
+          .placa {
+            box-shadow: none;
+            border-radius: 0;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2 / 1;
+          }
+        }
+      `}</style>
+
+      <div className="print-page">
+        <div className="print-info">
+          <strong>Placa de Venda — Terreno Comercial Tubarao/SC</strong>
+          <br />
+          Tamanho para impressao: <strong>200cm x 100cm (2m x 1m)</strong> — ACM
+          ou lona
+          <br />
+          Clique no botao abaixo para imprimir ou salvar como PDF
+        </div>
+
+        <div className="placa">
+          <div className="placa-info">
+            <div>
+              <div className="tag-vende">VENDE-SE</div>
+              <div className="titulo">
+                <h1>
+                  Terreno
+                  <span>Comercial</span>
+                </h1>
+              </div>
+              <div className="specs">
+                <div className="spec-item">
+                  <div className="spec-valor">490m²</div>
+                  <div className="spec-label">Area total</div>
+                </div>
+                <div className="spec-divider" />
+                <div className="spec-item">
+                  <div className="spec-valor">14m</div>
+                  <div className="spec-label">Testada</div>
+                </div>
+                <div className="spec-divider" />
+                <div className="spec-item">
+                  <div className="spec-valor">35m</div>
+                  <div className="spec-label">Profundidade</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bottom-row">
+              <div className="localizacao">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span>
+                  Vila Moema, Tubarao/SC
+                  <br />
+                  Prox. Farol Shopping
+                </span>
+              </div>
+
+              <div className="whatsapp">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <div className="whatsapp-text">
+                  <span className="whatsapp-label">WhatsApp</span>
+                  <span className="whatsapp-number">(48) 3192-0163</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="placa-qr">
+            <div className="qr-titulo">Acesse o site</div>
+            <div className="qr-code-container">
+              <svg viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d={qrCodePath}
+                  fill="#000000"
+                  fillOpacity="1"
+                  fillRule="nonzero"
+                  stroke="none"
+                />
+              </svg>
+            </div>
+            <div className="qr-url">
+              <div className="qr-url-label">Visite nosso site</div>
+              <span>terrenotubarao.com.br</span>
+            </div>
+            <div className="qr-instrucao">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                />
+              </svg>
+              Aponte a camera do celular
+              <br />
+              para o QR Code
+            </div>
+          </div>
+        </div>
+
+        <button className="btn-print" onClick={() => window.print()}>
+          Imprimir / Salvar como PDF
+        </button>
+      </div>
+    </>
+  );
+}
