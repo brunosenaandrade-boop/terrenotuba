@@ -242,15 +242,29 @@ export default function ImpressaoPage() {
         }
         .btn-print:hover { background: #0f172a; }
 
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          color-adjust: exact !important;
+        }
+
         @media print {
-          body { background: white !important; }
-          .print-info, .btn-print { display: none; }
+          body { background: white !important; margin: 0; padding: 0; }
+          .print-info, .btn-print { display: none !important; }
+          .print-page { padding: 0; min-height: auto; }
           .placa {
             box-shadow: none;
             border-radius: 0;
             width: 100%;
             height: auto;
             aspect-ratio: 2 / 1;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          .placa, .placa * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
           }
         }
       `}</style>

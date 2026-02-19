@@ -293,15 +293,23 @@
       margin-right: 4px;
     }
 
+    /* ===== FORÇAR CORES NA IMPRESSÃO ===== */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
     /* ===== PRINT STYLES ===== */
     @media print {
       body {
-        background: white;
+        background: white !important;
+        margin: 0;
         padding: 0;
       }
 
       .print-info, .btn-print {
-        display: none;
+        display: none !important;
       }
 
       .placa {
@@ -310,6 +318,14 @@
         width: 100%;
         height: auto;
         aspect-ratio: 2 / 1;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .placa, .placa * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
       }
     }
 
