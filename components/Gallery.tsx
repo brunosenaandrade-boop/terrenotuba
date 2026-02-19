@@ -13,24 +13,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 
 const images = [
-  { src: '/images/fachada-principal.jpg', alt: 'Fachada da loja - Vista frontal', category: 'Fachada' },
-  { src: '/images/foto-01.jpg', alt: 'Fachada da loja - Vista lateral', category: 'Fachada' },
-  { src: '/images/foto-02.jpg', alt: 'Fachada da loja - Outra vista', category: 'Fachada' },
-  { src: '/images/foto-03.jpg', alt: 'Fachada - Vista ampla', category: 'Fachada' },
-  { src: '/images/foto-04.jpg', alt: 'Fachada - Perspectiva', category: 'Fachada' },
-  { src: '/images/foto-05.jpg', alt: 'Fachada completa', category: 'Fachada' },
-  { src: '/images/foto-06.jpg', alt: 'Vista aérea - Avenida', category: 'Vista Aérea' },
-  { src: '/images/foto-07.jpg', alt: 'Telhado - Vista superior', category: 'Estrutura' },
-  { src: '/images/foto-08.jpg', alt: 'Telhado - Detalhe', category: 'Estrutura' },
-  { src: '/images/foto-09.jpg', alt: 'Telhado - Estrutura existente', category: 'Estrutura' },
-  { src: '/images/foto-10.jpg', alt: 'Telhado - Vista geral', category: 'Estrutura' },
-  { src: '/images/foto-11.jpg', alt: 'Quintal - Vista aérea', category: 'Quintal' },
-  { src: '/images/foto-12.jpg', alt: 'Quintal - Jardim', category: 'Quintal' },
-  { src: '/images/foto-13.jpg', alt: 'Quintal - Área verde', category: 'Quintal' },
-  { src: '/images/foto-14.jpg', alt: 'Vista aérea do terreno', category: 'Vista Aérea' },
-  { src: '/images/foto-15.jpg', alt: 'Área verde - Detalhe', category: 'Quintal' },
-  { src: '/images/foto-16.jpg', alt: 'Estrutura do telhado', category: 'Estrutura' },
-  { src: '/images/foto-17.jpg', alt: 'Vegetação do quintal', category: 'Quintal' },
+  { src: '/images/fachada-principal.jpg', alt: 'Fachada da loja - Vista frontal com 14m de testada', category: 'Fachada' },
+  { src: '/images/foto-01.jpg', alt: 'Fachada - Vista lateral mostrando a vitrine', category: 'Fachada' },
+  { src: '/images/foto-05.jpg', alt: 'Fachada - Vista da esquina com numeração 36', category: 'Fachada' },
+  { src: '/images/foto-06.jpg', alt: 'Vista aérea da Av. Marcolino Martins Cabral', category: 'Vista Aérea' },
+  { src: '/images/foto-07.jpg', alt: 'Vista superior mostrando a área construída', category: 'Estrutura' },
+  { src: '/images/foto-11.jpg', alt: 'Terreno - Vista aérea da área verde nos fundos', category: 'Terreno' },
+  { src: '/images/foto-13.jpg', alt: 'Terreno - Área verde com gramado e caminho', category: 'Terreno' },
 ];
 
 export default function Gallery() {
@@ -65,7 +54,7 @@ export default function Gallery() {
             Fotos do Terreno
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Veja o terreno, as estruturas existentes, vista aérea e o entorno comercial
+            Veja a fachada, vista aérea da avenida e a área verde do terreno
           </p>
         </div>
 
