@@ -272,7 +272,7 @@ export default function ImpressaoPage() {
 
       <div className="print-page">
         <div className="print-info">
-          <strong>Placa de Venda — Terreno Comercial Tubarao/SC</strong>
+          <strong>Placa de Venda — Terreno Comercial Tubarão/SC</strong>
           <br />
           Tamanho para impressao: <strong>200cm x 100cm (2m x 1m)</strong> — ACM
           ou lona
@@ -325,7 +325,7 @@ export default function ImpressaoPage() {
                   />
                 </svg>
                 <span>
-                  Vila Moema, Tubarao/SC
+                  Vila Moema, Tubarão/SC
                   <br />
                   Prox. Farol Shopping
                 </span>
