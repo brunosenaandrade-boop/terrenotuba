@@ -83,17 +83,27 @@ export default function ImpressaoPage() {
         }
         .spec-item { text-align: center; }
         .spec-valor {
-          font-size: 30px;
+          font-size: 36px;
           font-weight: 800;
           color: #fbbf24;
           line-height: 1;
         }
         .spec-label {
-          font-size: 13px;
+          font-size: 14px;
           color: #94a3b8;
           text-transform: uppercase;
           letter-spacing: 1px;
           margin-top: 4px;
+        }
+        .consulte-valor {
+          margin-top: 20px;
+          font-size: 22px;
+          font-weight: 700;
+          color: #94a3b8;
+          letter-spacing: 1px;
+        }
+        .consulte-valor span {
+          color: #fbbf24;
         }
         .spec-divider {
           width: 2px;
@@ -135,7 +145,7 @@ export default function ImpressaoPage() {
           box-shadow: 0 0 20px rgba(34, 197, 94, 0.3), 0 4px 15px rgba(0,0,0,0.3);
         }
         .whatsapp svg {
-          width: 32px; height: 32px;
+          width: 40px; height: 40px;
           color: #ffffff;
           flex-shrink: 0;
         }
@@ -151,7 +161,7 @@ export default function ImpressaoPage() {
           font-weight: 700;
         }
         .whatsapp-number {
-          font-size: 30px;
+          font-size: 36px;
           color: #ffffff;
           font-weight: 900;
           letter-spacing: 2px;
@@ -293,7 +303,7 @@ export default function ImpressaoPage() {
               <div className="specs">
                 <div className="spec-item">
                   <div className="spec-valor">490m²</div>
-                  <div className="spec-label">Area total</div>
+                  <div className="spec-label">Área total</div>
                 </div>
                 <div className="spec-divider" />
                 <div className="spec-item">
@@ -306,6 +316,7 @@ export default function ImpressaoPage() {
                   <div className="spec-label">Profundidade</div>
                 </div>
               </div>
+              <div className="consulte-valor">Valor: <span>Consulte</span></div>
             </div>
 
             <div className="bottom-row">
@@ -325,9 +336,9 @@ export default function ImpressaoPage() {
                   />
                 </svg>
                 <span>
-                  Vila Moema, Tubarão/SC
+                  R. Profª Eugênia dos Reis Perito, 36
                   <br />
-                  Prox. Farol Shopping
+                  Vila Moema, Tubarão/SC
                 </span>
               </div>
 
