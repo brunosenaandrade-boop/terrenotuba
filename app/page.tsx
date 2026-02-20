@@ -7,10 +7,44 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import ScrollTracker from "@/components/ScrollTracker";
+import FAQ from "@/components/FAQ";
+
+const faqItems = [
+  {
+    question: "Qual o tamanho do terreno?",
+    answer:
+      "O terreno possui 490m² de área total, com 14 metros de testada (frente) e 35 metros de profundidade.",
+  },
+  {
+    question: "Onde fica o terreno?",
+    answer:
+      "Na Rua Profª Eugênia dos Reis Perito, 36 — bairro Vila Moema, Tubarão/SC. A apenas 900 metros do Farol Shopping e próximo à Av. Marcolino Martins Cabral.",
+  },
+  {
+    question: "Pode construir prédio ou edifício comercial?",
+    answer:
+      "Sim. O terreno está em zona comercial, o que permite a construção de lojas, clínicas, escritórios, edifício misto ou galpão comercial.",
+  },
+  {
+    question: "Qual o valor do terreno e o preço por m²?",
+    answer:
+      "O valor é R$ 1.600.000,00, o que equivale a R$ 3.265 por metro quadrado — abaixo da média da região para terrenos em zona comercial premium.",
+  },
+  {
+    question: "O terreno gera renda atualmente?",
+    answer:
+      "Sim. Existe uma estrutura comercial já em funcionamento no local, gerando renda imediata enquanto o comprador planeja o desenvolvimento do terreno.",
+  },
+  {
+    question: "Como posso agendar uma visita?",
+    answer:
+      "Você pode entrar em contato pelo WhatsApp (48) 3192-0163 ou preencher o formulário de contato no site. Respondemos em até 24 horas.",
+  },
+];
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "RealEstateListing",
   name: "Terreno Comercial 490m² - Vila Moema, Tubarão/SC",
   description:
     "Terreno comercial de 490m² com 14m de testada em zona comercial premium. A 900m do Farol Shopping, próximo à Av. Marcolino Martins Cabral.",
@@ -32,7 +66,7 @@ const jsonLd = {
     { "@type": "PropertyValue", name: "Preço por m²", value: "R$ 3.265" },
     { "@type": "PropertyValue", name: "Zoneamento", value: "Zona comercial" },
   ],
-  "schema:location": {
+  location: {
     "@type": "Place",
     name: "Vila Moema, Tubarão/SC",
     address: {
@@ -51,6 +85,32 @@ const jsonLd = {
   },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Início",
+      item: "https://www.terrenotubarao.com.br",
+    },
+  ],
+};
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default function Home() {
   return (
     <main>
@@ -58,11 +118,20 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Hero />
       <VideoTour />
       <Gallery />
       <Features />
       <Location />
+      <FAQ items={faqItems} />
       <ContactForm />
       <Footer />
       <WhatsAppFloat />

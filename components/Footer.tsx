@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Terreno Comercial</h3>
+            <h2 className="text-xl font-bold mb-4">Terreno Comercial</h2>
             <p className="text-gray-400 leading-relaxed">
               Terreno comercial em localização privilegiada em Tubarão/SC.
               Oportunidade única de investimento com múltiplas possibilidades de uso.
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contato</h3>
+            <h2 className="text-xl font-bold mb-4">Contato</h2>
             <div className="space-y-3">
               <a
                 href={`tel:+${CONTACT_PHONE}`}
@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* WhatsApp CTA */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Fale Conosco</h3>
+            <h2 className="text-xl font-bold mb-4">Fale Conosco</h2>
             <p className="text-gray-400 mb-4">
               Entre em contato pelo WhatsApp para mais informações ou agendar uma visita.
             </p>

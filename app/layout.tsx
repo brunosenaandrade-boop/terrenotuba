@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     "terreno 14m testada",
     "zona comercial Tubarão",
   ],
+  alternates: {
+    canonical: "https://www.terrenotubarao.com.br",
+  },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Terreno Comercial 490m² | 14m Testada - Vila Moema, Tubarão/SC",
     description:
@@ -40,6 +44,13 @@ export const metadata: Metadata = {
         alt: "Terreno comercial 490m² em Tubarão/SC - Vila Moema",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terreno Comercial 490m² | Vila Moema, Tubarão/SC",
+    description:
+      "490m² em zona comercial premium. 14m de testada, a 900m do Farol Shopping. R$ 3.265/m².",
+    images: ["/images/fachada-principal.jpg"],
   },
 };
 
