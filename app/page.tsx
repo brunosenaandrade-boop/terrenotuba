@@ -3,7 +3,6 @@ import VideoTour from "@/components/VideoTour";
 import Gallery from "@/components/Gallery";
 import Features from "@/components/Features";
 import Location from "@/components/Location";
-import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import ScrollTracker from "@/components/ScrollTracker";
@@ -38,7 +37,7 @@ const faqItems = [
   {
     question: "Como posso agendar uma visita?",
     answer:
-      "Você pode entrar em contato pelo WhatsApp (48) 3192-0163 ou preencher o formulário de contato no site. Respondemos em até 24 horas.",
+      "Você pode entrar em contato pelo WhatsApp (48) 3192-0163. Respondemos em minutos.",
   },
 ];
 
@@ -132,7 +131,6 @@ export default function Home() {
       <Features />
       <Location />
       <FAQ items={faqItems} />
-      <ContactForm />
       <Footer />
       <WhatsAppFloat />
       <ScrollTracker />
