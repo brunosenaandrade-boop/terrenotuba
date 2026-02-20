@@ -38,16 +38,17 @@ export default function ImpressaoPage() {
           content: '';
           position: absolute;
           top: 0; left: 0; right: 0;
-          height: 8px;
+          height: 18px;
           background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b);
         }
 
         .placa-info {
           flex: 1;
-          padding: 28px 40px 24px;
+          padding: 38px 40px 24px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: center;
+          gap: 22px;
         }
 
         .tag-vende {
@@ -96,14 +97,15 @@ export default function ImpressaoPage() {
           margin-top: 4px;
         }
         .consulte-valor {
-          margin-top: 20px;
-          font-size: 22px;
-          font-weight: 700;
-          color: #94a3b8;
+          margin-top: 18px;
+          font-size: 34px;
+          font-weight: 800;
+          color: #ffffff;
           letter-spacing: 1px;
         }
         .consulte-valor span {
           color: #fbbf24;
+          font-size: 42px;
         }
         .spec-divider {
           width: 2px;
