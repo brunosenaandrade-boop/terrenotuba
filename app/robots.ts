@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/impressao',
     },
     sitemap: 'https://www.terrenotubarao.com.br/sitemap.xml',
   };

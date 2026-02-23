@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://www.terrenotubarao.com.br',
-      lastModified: new Date(),
+      lastModified: '2025-02-20',
       changeFrequency: 'weekly',
       priority: 1,
       images: [
@@ -26,6 +26,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'https://www.terrenotubarao.com.br/images/foto-15.jpg',
         'https://www.terrenotubarao.com.br/images/foto-16.jpg',
         'https://www.terrenotubarao.com.br/images/foto-17.jpg',
+      ],
+      videos: [
+        {
+          title: 'Tour Virtual - Terreno Comercial 490m² em Tubarão/SC',
+          thumbnail_loc: 'https://www.terrenotubarao.com.br/images/fachada-principal.jpg',
+          description: 'Conheça o terreno comercial de 490m² com 14m de testada na Vila Moema, Tubarão/SC. A 900m do Farol Shopping.',
+          content_loc: 'https://www.terrenotubarao.com.br/videos/tour-terreno.mp4',
+        },
       ],
     },
   ];
